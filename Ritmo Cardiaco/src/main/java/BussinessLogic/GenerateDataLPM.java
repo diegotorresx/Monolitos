@@ -15,15 +15,15 @@ public class GenerateDataLPM {
     private  RitmoCardiacoModel genereateData(String usuarioType){
         Double d;
         switch (usuarioType){
-            case "RecienNacido":
+            case "Recien Nacido":
                 d = Math.random()*170+120;
                 rc.setLPM(d.intValue());
                 break;
-            case "LactanteMenor":
+            case "Lactante Menor":
                 d = Math.random()*160+120;
                 rc.setLPM(d.intValue());
                 break;
-            case "LactanteMayor":
+            case "Lactante Mayor":
                 d = Math.random()*130+110;
                 rc.setLPM(d.intValue());
                 break;
