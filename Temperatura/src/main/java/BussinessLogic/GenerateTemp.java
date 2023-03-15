@@ -9,6 +9,18 @@ package BussinessLogic;
  *
  * @author admin2
  */
-public class GenerateTemp {
-    
+public class GenerateTemp  {
+      private GenerateThread generar;
+      
+      public GenerateTemp(){
+          generar=new GenerateThread();
+      }
+      
+      public void iniciarSimulacion(){
+          generar.run();
+      }
+      
+      public void pararsimulación(){
+          generar.stop();
+      }
 }
