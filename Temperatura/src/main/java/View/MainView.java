@@ -5,11 +5,15 @@
  */
 package View;
 
+import BussinessLogic.GenerateTemp;
+
 /**
  *
  * @author admin2
  */
 public class MainView extends javax.swing.JFrame {
+    
+    private GenerateTemp tempcontroller= new GenerateTemp();
 
     /**
      * Creates new form MainView
@@ -169,10 +173,14 @@ public class MainView extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //System.out.println("si funcione we");
+        tempcontroller.iniciarSimulacion();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        tempcontroller.pararsimulación();
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
