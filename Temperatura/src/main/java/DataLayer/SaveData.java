@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class SaveData {
     private FileWriter fw;
     public void save(ArrayList<Double> data) throws IOException{
-        String fichero = "../Files/LogTemp.txt";
+        String fichero = "src/main/java/Files/LogTemp.txt";
         File f = new File(fichero);
         if(!f.exists()){
             try{
@@ -29,7 +29,7 @@ public class SaveData {
                 new Exception (e.toString());
             }
         }
-        fw = new FileWriter("/Files/LogTemp.txt");
+        fw = new FileWriter("src/main/java/Files/LogTemp.txt");
         saveData(data);
         
     }

@@ -75,7 +75,7 @@ public class MainView extends javax.swing.JFrame {
         jLabel4.setText("Simulador de temperatura");
 
         jProgressBar1.setMaximum(38000);
-        jProgressBar1.setMinimum(36000);
+        jProgressBar1.setMinimum(34000);
         jProgressBar1.setOrientation(1);
         jProgressBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
