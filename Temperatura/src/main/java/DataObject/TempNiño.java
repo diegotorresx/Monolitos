@@ -12,8 +12,19 @@ package DataObject;
 public class TempNiño extends RangoTemp {
     
     public TempNiño(){
-        tempMax=37.01;
-        tempMin=37.1;
+        
+        
+    }
+    
+    @Override
+    public void definirTemp(){
+         if(!enfermo){
+           tempMax=37.01;
+            tempMin=37.1;
+        }else{
+            tempMax=37;
+            tempMin=36;
+        }
     }
     
 }

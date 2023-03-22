@@ -15,6 +15,8 @@ public abstract class RangoTemp {
     double tempMax;
     double tempMin;
     boolean enfermo=false;
+    
+    public abstract void definirTemp();
 
     public double getTemp() {
         return temp;

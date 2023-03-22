@@ -12,8 +12,19 @@ package DataObject;
 public class TempLactante extends RangoTemp{
     
     public TempLactante(){
-        tempMax=37.20;
-        tempMin=37.29;
+     
+        
+    }
+    
+    @Override
+    public void definirTemp(){
+           if(!enfermo){
+            tempMax=37.20;
+            tempMin=37.29;
+        }else{
+            tempMax=37;
+            tempMin=36;
+        }
     }
     
 }

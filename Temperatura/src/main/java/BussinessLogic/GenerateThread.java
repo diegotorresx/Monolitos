@@ -30,15 +30,17 @@ public class GenerateThread extends Thread{
     RangoTemp rango;
     ArrayList<Double> registro;
     
-    public GenerateThread(JProgressBar progress, String tipoPaciente){
-        rango = definirRangos(tipoPaciente);
+    public GenerateThread(JProgressBar progress, String tipoPaciente, boolean enfermo){
+        rango = definirRangos(tipoPaciente,enfermo);
+        rango.setEnfermo(enfermo);
+        rango.definirTemp();
         this.termometro=progress;
         this.rand=new Random();
         this.registro=new ArrayList<Double>();
     }
     
     
-    public RangoTemp definirRangos(String tipoPaciente){
+    public RangoTemp definirRangos(String tipoPaciente, boolean enfermo){
         switch(tipoPaciente){
             case "Adulto":
                 return new TempAdulto();

@@ -8,6 +8,7 @@ package View;
 import BussinessLogic.GenerateTemp;
 import javax.swing.JButton;
 import javax.swing.JProgressBar;
+import javax.swing.JRadioButton;
 
 /**
  *
@@ -35,7 +36,7 @@ public class MainView extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
+        enfermo = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -49,10 +50,10 @@ public class MainView extends javax.swing.JFrame {
 
         jLabel2.setText("Enfermedad");
 
-        jRadioButton5.setText("Enfermo");
-        jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
+        enfermo.setText("Enfermo");
+        enfermo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton5ActionPerformed(evt);
+                enfermoActionPerformed(evt);
             }
         });
 
@@ -103,7 +104,7 @@ public class MainView extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(jButton2)
-                            .addComponent(jRadioButton5)
+                            .addComponent(enfermo)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(tipoUsuario, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
@@ -126,7 +127,7 @@ public class MainView extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton5)
+                        .addComponent(enfermo)
                         .addGap(75, 75, 75)
                         .addComponent(jButton1)
                         .addGap(18, 18, 18)
@@ -137,9 +138,9 @@ public class MainView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton5ActionPerformed
+    private void enfermoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enfermoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton5ActionPerformed
+    }//GEN-LAST:event_enfermoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -161,6 +162,11 @@ public class MainView extends javax.swing.JFrame {
     public JButton getjButton1() {
         return jButton1;
     }
+
+    public JRadioButton getEnfermo() {
+        return enfermo;
+    }
+    
 
     /**
      * @param args the command line arguments
@@ -203,6 +209,7 @@ public class MainView extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton enfermo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
@@ -210,7 +217,6 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JRadioButton jRadioButton5;
     private javax.swing.JComboBox<String> tipoUsuario;
     // End of variables declaration//GEN-END:variables
 }

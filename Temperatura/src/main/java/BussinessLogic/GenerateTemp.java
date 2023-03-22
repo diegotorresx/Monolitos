@@ -27,7 +27,11 @@ public class GenerateTemp  {
       
       public void iniciarSimulacion(String tipoUsuario){
           vista.getjButton1().setEnabled(false);
-          generar=new GenerateThread(vista.getjProgressBar1(),tipoUsuario);
+          boolean enfermo=false;
+          if(vista.getEnfermo().isSelected())
+              enfermo=true;
+          generar=new GenerateThread(vista.getjProgressBar1(),tipoUsuario,enfermo);
+          
           generar.start();
       }
       

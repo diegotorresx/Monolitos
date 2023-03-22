@@ -12,8 +12,20 @@ package DataObject;
 public class TempNacido extends RangoTemp{
     
     public TempNacido(){
-        tempMax=36.1;
-        tempMin=37.7;
+       
+    }
+    
+    @Override
+    public void definirTemp(){
+        if(!enfermo){
+            tempMax=37.7;
+            tempMin=36.1;
+        }else{
+            tempMax=38;
+            tempMin=35.5;
+        }
+        
+    
     }
     
 }
