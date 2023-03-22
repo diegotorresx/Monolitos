@@ -1,3 +1,6 @@
-D:\ProyectoRitmoCardiaco\SensorRitmoCardiaco\src\main\java\com\mycompany\sensorritmocardiaco\SensorRitmoCardiaco.java
-D:\ProyectoRitmoCardiaco\SensorRitmoCardiaco\src\main\java\DataObjects\RitmoCardiacoModel.java
-D:\ProyectoRitmoCardiaco\SensorRitmoCardiaco\src\main\java\BussinessLogic\GenerateDataLPM.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\DataObjects\RitmoCardiacoModel.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\BussinessLogic\GenerateDataLPM.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\ViewLayer\Controler\CreateLPM.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\BussinessLogic\GenerateTime.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\DataLayer\SaveData.java
+D:\Monolito\Monolitos\Ritmo Cardiaco\src\main\java\ViewLayer\View\MainView.java
