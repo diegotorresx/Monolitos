@@ -9,25 +9,37 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 /**
  *
  * @author admin2
  */
 public class SaveData {
-    private void save(String data) throws IOException{
-        String fichero = "/Files/Log.txt";
+    private FileWriter fw;
+    public void save(ArrayList<Double> data) throws IOException{
+        String fichero = "../Files/LogTemp.txt";
         File f = new File(fichero);
         if(!f.exists()){
             try{
                 f.createNewFile();
+                
             }
             catch(Exception e){
                 new Exception (e.toString());
             }
         }
-        FileWriter fw = new FileWriter("/Files/Log.txt");
+        fw = new FileWriter("/Files/LogTemp.txt");
+        saveData(data);
+        
+    }
+    
+    private void saveData(ArrayList<Double> data){
         PrintWriter pw = new PrintWriter(fw);
-        pw.println(data);
+        for(int i=0; i<data.size();i++){
+            pw.println(data.get(i));
+        }
+        pw.close();
+        
     }
 }

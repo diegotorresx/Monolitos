@@ -9,7 +9,7 @@ package DataObject;
  *
  * @author admin2
  */
-public class TempNiño extends Temperatura {
+public class TempNiño extends RangoTemp {
     
     public TempNiño(){
         tempMax=37.01;

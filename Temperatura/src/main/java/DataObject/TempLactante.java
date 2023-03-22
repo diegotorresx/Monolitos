@@ -9,7 +9,7 @@ package DataObject;
  *
  * @author admin2
  */
-public class TempLactante extends Temperatura{
+public class TempLactante extends RangoTemp{
     
     public TempLactante(){
         tempMax=37.20;
