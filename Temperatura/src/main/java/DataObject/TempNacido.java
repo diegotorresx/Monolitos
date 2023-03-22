@@ -11,10 +11,7 @@ package DataObject;
  */
 public class TempNacido extends RangoTemp{
     
-    public TempNacido(){
-       
-    }
-    
+
     @Override
     public void definirTemp(){
         if(!enfermo){

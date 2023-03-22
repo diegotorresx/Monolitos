@@ -10,10 +10,7 @@ package DataObject;
  * @author admin2
  */
 public class TempAdulto extends RangoTemp {
-    public TempAdulto(){
-       
-        
-    }
+
     
     @Override
     public void definirTemp(){

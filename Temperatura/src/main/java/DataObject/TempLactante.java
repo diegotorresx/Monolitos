@@ -11,11 +11,7 @@ package DataObject;
  */
 public class TempLactante extends RangoTemp{
     
-    public TempLactante(){
-     
-        
-    }
-    
+
     @Override
     public void definirTemp(){
            if(!enfermo){

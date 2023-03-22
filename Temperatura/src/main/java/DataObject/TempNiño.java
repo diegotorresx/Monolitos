@@ -11,10 +11,7 @@ package DataObject;
  */
 public class TempNiño extends RangoTemp {
     
-    public TempNiño(){
-        
-        
-    }
+    
     
     @Override
     public void definirTemp(){
