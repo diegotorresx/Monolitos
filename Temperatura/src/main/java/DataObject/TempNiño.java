@@ -16,11 +16,11 @@ public class TempNiño extends RangoTemp {
     @Override
     public void definirTemp(){
          if(!enfermo){
-           tempMax=37.01;
-            tempMin=37.1;
+           tempMax=37.1;
+            tempMin=37.01;
         }else{
-            tempMax=37;
-            tempMin=36;
+            tempMax=38;
+            tempMin=37.1;
         }
     }
     

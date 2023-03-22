@@ -18,8 +18,8 @@ public class TempNacido extends RangoTemp{
             tempMax=37.7;
             tempMin=36.1;
         }else{
-            tempMax=38;
-            tempMin=35.5;
+            tempMax=39;
+            tempMin=37.5;
         }
         
     

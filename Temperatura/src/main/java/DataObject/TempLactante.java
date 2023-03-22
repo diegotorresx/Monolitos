@@ -15,11 +15,11 @@ public class TempLactante extends RangoTemp{
     @Override
     public void definirTemp(){
            if(!enfermo){
-            tempMax=37.20;
-            tempMin=37.29;
+            tempMax=37.29;
+            tempMin=37.20;
         }else{
-            tempMax=37;
-            tempMin=36;
+            tempMax=38;
+            tempMin=37;
         }
     }
     

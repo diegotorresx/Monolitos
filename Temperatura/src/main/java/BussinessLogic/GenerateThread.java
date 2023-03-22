@@ -74,7 +74,7 @@ public class GenerateThread extends Thread{
                     Thread.sleep(2 * 1000);
                     
                    double random = rand.nextDouble();
-                   double temp = rango.getTempMin() + (random * (rango.getTempMax() - rango.getTempMin()));
+                   double temp = rango.getTempMax() + (random * (rango.getTempMin() - rango.getTempMax()));
                    registro.add(temp);
                     System.out.println((int)(temp*1000));
                    this.termometro.setValue((int)(temp*1000));
