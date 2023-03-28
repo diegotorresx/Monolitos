@@ -4,10 +4,7 @@
  */
 package ViewLayer.View;
 import BussinessLogic.GenerateTime;
-import java.awt.event.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.event.AncestorListener;
+import java.awt.Image;
 /**
  *
  * @author Estudiantes
@@ -19,6 +16,7 @@ public class MainView extends javax.swing.JFrame {
      */
     public MainView() {
         initComponents();
+		this.repaint();
     }
 
     /**
@@ -35,6 +33,7 @@ public class MainView extends javax.swing.JFrame {
         Stop = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         Enfermo = new javax.swing.JRadioButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,26 +77,32 @@ public class MainView extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(TypeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(47, 47, 47)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Enfermo)
-                            .addComponent(Stop)))
+                            .addComponent(Stop)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Start)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(Start)))
-                .addContainerGap(328, Short.MAX_VALUE))
+                        .addGap(28, 28, 28)
+                        .addComponent(TypeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
-                .addComponent(Start)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Start)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(37, 37, 37))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)))
                 .addComponent(TypeUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(Enfermo)
@@ -110,6 +115,7 @@ public class MainView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     private String typeUser;
     private boolean validateSick = false;
+	private Image imagen;
     private void TypeUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TypeUserActionPerformed
         typeUser = TypeUser.getSelectedItem().toString();
     }//GEN-LAST:event_TypeUserActionPerformed
@@ -119,9 +125,9 @@ public class MainView extends javax.swing.JFrame {
             System.out.println("Enfermo");
         }
         System.out.println(typeUser);
-        tm.Contar(typeUser, validateSick);
+        tm.Contar(typeUser, validateSick,jLabel2);
     }//GEN-LAST:event_StartActionPerformed
-   
+	
     private void StopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StopActionPerformed
         validateSick = false;
         tm.Detener();
@@ -173,5 +179,6 @@ public class MainView extends javax.swing.JFrame {
     private javax.swing.JButton Stop;
     private javax.swing.JComboBox<String> TypeUser;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
